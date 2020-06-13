@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "500316612675",
+    "firebase_url": "https://dpm-2020-1-equipe-05.firebaseio.com",
+    "project_id": "dpm-2020-1-equipe-05",
+    "storage_bucket": "dpm-2020-1-equipe-05.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500316612675:android:c2b556763989200ab7ccf6",
+        "android_client_info": {
+          "package_name": "br.com.furb.trabalhofinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500316612675-u6e9jsa8e6dc3j342irakv04kfohdort.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDE3UAvywqUyIpJ7qWg_NqgGYdZZClMHN0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500316612675-u6e9jsa8e6dc3j342irakv04kfohdort.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
