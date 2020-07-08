@@ -20,6 +20,10 @@
         </activity>
         <activity android:name=".Lista">
         </activity>
+        <activity android:name=".Join">
+        </activity>
+        <activity android:name=".Usuario">
+        </activity>
 
         <service
             android:name=".messaging.MessagingService"
