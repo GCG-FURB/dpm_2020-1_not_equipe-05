@@ -15,7 +15,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import br.com.furb.trabalhofinal.model.EventPojo;
 import br.com.furb.trabalhofinal.service.EventService;
 
-public class MainActivity extends AppCompatActivity {
+public class AddEvent extends AppCompatActivity {
 
     private Button addEvent;
     private TextView eventName;
@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_add_event);
 
         addEvent = findViewById(R.id.btAddEvent);
         eventName = findViewById(R.id.ptEventName);
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         Button BtBackToList = (Button) findViewById(R.id.btBackToList);
         BtBackToList.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent it = new Intent(MainActivity.this, Lista.class);
+                Intent it = new Intent(AddEvent.this, Lista.class);
                 startActivity(it);
             }
         });

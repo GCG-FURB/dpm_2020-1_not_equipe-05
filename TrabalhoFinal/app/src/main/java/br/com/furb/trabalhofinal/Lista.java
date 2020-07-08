@@ -60,7 +60,7 @@ public class Lista extends AppCompatActivity {
         Button BtToAddEvent = (Button) findViewById(R.id.btToAddEvent);
         BtToAddEvent.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                Intent it = new Intent(Lista.this, MainActivity.class);
+                Intent it = new Intent(Lista.this, AddEvent.class);
                 startActivity(it);
             }
         });

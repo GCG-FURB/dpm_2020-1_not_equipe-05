@@ -1,4 +1,4 @@
-package br.com.furb.trabalhofinal.ui.login;
+package br.com.furb.trabalhofinal;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -23,9 +23,6 @@ import com.google.android.gms.common.api.ApiException;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
-
-import br.com.furb.trabalhofinal.Lista;
-import br.com.furb.trabalhofinal.R;
 
 /**
  * Activity to demonstrate basic retrieval of the Google user's ID, email address, and basic

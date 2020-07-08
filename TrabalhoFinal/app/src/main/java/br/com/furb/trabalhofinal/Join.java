@@ -12,7 +12,6 @@ public class Join extends AppCompatActivity {
 
     private TextView ptEventName;
     private TextView ptEventDesc;
-    private TextView eventName;
     private TextView ptEventDate;
     private TextView ptEventHour;
     private TextView ptEventAdre;

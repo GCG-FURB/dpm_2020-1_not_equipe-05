@@ -12,7 +12,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 
-import br.com.furb.trabalhofinal.ui.login.SignInActivity;
+import br.com.furb.trabalhofinal.SignInActivity;
 
 public class GoogleSignInService {
 
