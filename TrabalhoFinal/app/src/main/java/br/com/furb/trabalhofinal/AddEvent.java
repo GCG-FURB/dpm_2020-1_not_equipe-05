@@ -59,7 +59,10 @@ public class AddEvent extends AppCompatActivity {
         EventPojo event = new EventPojo();
         event.setNome(eventName.getText().toString());
         event.setDescricao(eventDesc.getText().toString());
+        event.setData(eventDate.getText().toString());
+        event.setHorario(eventHour.getText().toString());
         event.setEndereco(eventAdre.getText().toString());
+        event.setCep(eventCEP.getText().toString());
 
         EventService eventService = new EventService();
         eventService.put(event)

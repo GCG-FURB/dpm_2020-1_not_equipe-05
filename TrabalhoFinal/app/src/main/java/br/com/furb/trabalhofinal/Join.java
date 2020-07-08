@@ -22,11 +22,11 @@ public class Join extends AppCompatActivity {
         setContentView(R.layout.activity_join);
 
         Intent intent = getIntent();
-        String eventName = intent.getStringExtra("eventName");
+        String eventName = intent.getStringExtra("eventNome");
         String eventDesc = intent.getStringExtra("eventDesc");
-        String eventDate = intent.getStringExtra("eventDate");
-        String eventHour = intent.getStringExtra("eventHour");
-        String eventAddress = intent.getStringExtra("eventAddress");
+        String eventDate = intent.getStringExtra("eventData");
+        String eventHour = intent.getStringExtra("eventHora");
+        String eventAddress = intent.getStringExtra("eventEncereco");
 
         ptEventName = (TextView) findViewById(R.id.ptEventName);
         ptEventDesc = (TextView) findViewById(R.id.ptEventDesc);

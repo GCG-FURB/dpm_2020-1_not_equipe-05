@@ -23,8 +23,9 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
     // you provide access to all the views for a data item in a view holder
     public static class MyViewHolder extends RecyclerView.ViewHolder {
         // each data item is just a string in this case
-        public TextView eventName;
-        public TextView eventAddress;
+        public EventPojo eventPojo;
+        public TextView eventNome;
+        public TextView eventEndereco;
 
         public MyViewHolder(View v) {
             super(v);
@@ -33,13 +34,17 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(v.getContext(), Join.class);
-                    intent.putExtra("eventName", eventName.getText().toString());
-                    intent.putExtra("eventAddress", eventAddress.getText().toString());
+                    intent.putExtra("eventNome", eventPojo.getNome());
+                    intent.putExtra("eventDesc", eventPojo.getDescricao());
+                    intent.putExtra("eventData", eventPojo.getData());
+                    intent.putExtra("eventHora", eventPojo.getHorario());
+                    intent.putExtra("eventEndereco", eventPojo.getEndereco());
+                    intent.putExtra("eventCep", eventPojo.getCep());
                     v.getContext().startActivity(intent);
                 }
             });
-            eventName = (TextView) v.findViewById(R.id.eventName);
-            eventAddress = (TextView) v.findViewById(R.id.eventAddress);
+            eventNome = (TextView) v.findViewById(R.id.eventName);
+            eventEndereco = (TextView) v.findViewById(R.id.eventAddress);
         }
     }
 
@@ -64,8 +69,19 @@ public class EventsAdapter extends RecyclerView.Adapter<EventsAdapter.MyViewHold
     public void onBindViewHolder(MyViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        holder.eventName.setText(mDataset.get(position).getDescricao());
-        holder.eventAddress.setText(mDataset.get(position).getEndereco());
+        EventPojo data = mDataset.get(position);
+
+        EventPojo eventPojo = new EventPojo();
+        eventPojo.setNome(data.getNome());
+        eventPojo.setDescricao(data.getDescricao());
+        eventPojo.setData(data.getData());
+        eventPojo.setHorario(data.getHorario());
+        eventPojo.setEndereco(data.getEndereco());
+        eventPojo.setCep(data.getCep());
+
+        holder.eventPojo = eventPojo;
+        holder.eventNome.setText(eventPojo.getNome());
+        holder.eventEndereco.setText(eventPojo.getEndereco());
     }
 
     // Return the size of your dataset (invoked by the layout manager)
