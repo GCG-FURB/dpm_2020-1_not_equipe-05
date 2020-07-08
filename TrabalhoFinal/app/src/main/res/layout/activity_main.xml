@@ -6,32 +6,138 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/bAddEvent"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Adicionar"
+    <LinearLayout
+        android:id="@+id/LinearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.318"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.474" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <EditText
-        android:id="@+id/ptEventName"
-        android:layout_width="210dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="269dp"
-        android:layout_marginEnd="101dp"
-        android:layout_marginBottom="10dp"
-        android:ems="10"
-        android:hint="Nome do evento"
-        android:inputType="textPersonName"
-        android:textAlignment="viewStart"
-        app:layout_constraintBottom_toTopOf="@+id/bAddEvent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/headEvent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cadastro_de_evento"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ptEventName"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="24dp"
+                android:autofillHints="Evento"
+                android:hint="@string/evento"
+                android:inputType="textPersonName|text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ptEventDesc"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:autofillHints="Descrição"
+                android:hint="@string/descricao"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ptEventDate"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:autofillHints="Data"
+                android:ems="10"
+                android:hint="@string/data"
+                android:inputType="date|datetime" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ptEventHour"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:autofillHints="Horário"
+                android:hint="@string/horario"
+                android:inputType="time" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ptEventAdre"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:autofillHints="Endereço"
+                android:hint="@string/endereco"
+                android:inputType="text" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/ptEventCEP"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginEnd="24dp"
+                android:autofillHints="CEP"
+                android:ems="10"
+                android:hint="@string/cep"
+                android:inputType="textPostalAddress" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btAddEvent"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/salvar" />
+
+        <Button
+            android:id="@+id/btBackToList"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/cancelar" />
+
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
