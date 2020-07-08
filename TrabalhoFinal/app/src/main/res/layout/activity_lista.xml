@@ -23,6 +23,11 @@
             android:text="@string/proximos_eventos"
             android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="597dp" />
+
         <Button
             android:id="@+id/btToAddEvent"
             android:layout_width="fill_parent"

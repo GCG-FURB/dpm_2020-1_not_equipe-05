@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">TrabalhoFinal</string>
     <string name="default_notification_channel_id">id-messaging</string>
+    <string name="facebook_app_id">658699924740168</string>
+    <string name="fb_login_protocol_scheme">fb658699924740168</string>
     <string name="salvar">Salvar</string>
     <string name="descricao">Descrição</string>
     <string name="data">Data</string>
