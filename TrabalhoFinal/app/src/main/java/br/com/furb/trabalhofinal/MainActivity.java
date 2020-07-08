@@ -1,5 +1,6 @@
 package br.com.furb.trabalhofinal;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -23,16 +24,35 @@ public class MainActivity extends AppCompatActivity {
 
     private Button addEvent;
     private TextView eventName;
+    private TextView eventDesc;
+    private TextView eventDate;
+    private TextView eventHour;
+    private TextView eventAdre;
+    private TextView eventCEP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        addEvent = findViewById(R.id.bAddEvent);
+        addEvent = findViewById(R.id.btAddEvent);
         eventName = findViewById(R.id.ptEventName);
+        eventDesc = findViewById(R.id.ptEventDesc);
+        eventDate = findViewById(R.id.ptEventDate);
+        eventHour = findViewById(R.id.ptEventHour);
+        eventAdre = findViewById(R.id.ptEventAdre);
+        eventCEP = findViewById(R.id.ptEventCEP);
 
         addEvent.setOnClickListener(addEventListener);
+
+        // Botão para retornar para lista de eventos
+        Button BtBackToList = (Button) findViewById(R.id.btBackToList);
+        BtBackToList.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent it = new Intent(MainActivity.this, Lista.class);
+                startActivity(it);
+            }
+        });
     }
 
     private View.OnClickListener addEventListener = new View.OnClickListener() {
