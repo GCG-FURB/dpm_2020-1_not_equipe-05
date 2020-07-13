@@ -1,5 +1,7 @@
 package br.com.furb.trabalhofinal;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -46,6 +48,23 @@ public class Join extends AppCompatActivity {
             public void onClick(View v) {
                 Intent it = new Intent(Join.this, Lista.class);
                 startActivity(it);
+            }
+        });
+
+        //Ação botão 'Participar' que exibe notificação e retorna para tela de lista de eventos
+        final Button BtJoinEvent = (Button) findViewById(R.id.btJoinEvent);
+        BtJoinEvent.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                new AlertDialog.Builder(Join.this)
+                        .setTitle("Você foi adicionado na lista!")
+                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialogInterface, int i) {
+                                Intent it = new Intent(Join.this, Lista.class);
+                                startActivity(it);
+                            }
+                        })
+                        .show();
             }
         });
     }
