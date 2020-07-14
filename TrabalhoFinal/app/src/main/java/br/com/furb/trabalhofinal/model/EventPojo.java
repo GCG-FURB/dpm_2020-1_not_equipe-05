@@ -3,6 +3,8 @@ package br.com.furb.trabalhofinal.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import br.com.furb.trabalhofinal.cep.CEP;
+
 /**
  * Representação de um evento a ser persistido.
  */
@@ -56,9 +58,7 @@ public class EventPojo extends BasePojo {
         this.endereco = endereco;
     }
 
-    public String getCep() {
-        return cep;
-    }
+    public String getCep() { return cep; }
 
     public void setCep(String cep) {
         this.cep = cep;

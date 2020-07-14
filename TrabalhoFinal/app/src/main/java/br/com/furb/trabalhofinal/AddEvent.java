@@ -12,6 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 
+import java.util.concurrent.ExecutionException;
+
+import br.com.furb.trabalhofinal.cep.CEP;
+import br.com.furb.trabalhofinal.cep.HttpService;
 import br.com.furb.trabalhofinal.model.EventPojo;
 import br.com.furb.trabalhofinal.service.EventService;
 
@@ -45,6 +49,22 @@ public class AddEvent extends AppCompatActivity {
             }
         });
 
+        eventCEP.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if (!hasFocus) {
+                    try {
+                        CEP retorno = new HttpService(eventCEP.getText().toString()).execute().get();
+                        String endereco = retorno.getCidade() + " " + retorno.getEstado() + ", " + retorno.getLogradouro() + " " + retorno.getComplemento();
+                        eventAdre.setText(endereco);
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+
+                }
+            }
+        });
+
         // Botão para retornar para lista de eventos
         Button BtBackToList = (Button) findViewById(R.id.btBackToList);
         BtBackToList.setOnClickListener(new View.OnClickListener() {
@@ -54,6 +74,8 @@ public class AddEvent extends AppCompatActivity {
             }
         });
     }
+
+
 
     public void addEvent() {
         EventPojo event = new EventPojo();

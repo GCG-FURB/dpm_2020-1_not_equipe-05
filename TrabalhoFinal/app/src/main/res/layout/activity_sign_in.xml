@@ -13,41 +13,62 @@
         android:layout_height="0dp"
         android:layout_weight="3"
         android:gravity="center_horizontal"
-        android:orientation="vertical"/>
+        android:orientation="vertical">
 
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1">
-
-        <com.google.android.gms.common.SignInButton
-            android:id="@+id/sign_in_button"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/relativeLayout"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="411dp"
-            android:layout_marginTop="182dp"
-            android:layout_marginEnd="205dp"
-            android:layout_marginBottom="93dp"
-            android:visibility="visible"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:visibility="gone" />
+            android:layout_height="429dp"
+            android:layout_weight="1">
 
-        <com.facebook.login.widget.LoginButton
-            android:id="@+id/connectWithFbButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="128dp"
-            android:layout_marginEnd="168dp"
-            android:text="  connect_with_facebook"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            <com.google.android.gms.common.SignInButton
+                android:id="@+id/sign_in_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="500dp"
+                android:layout_marginTop="182dp"
+                android:layout_marginEnd="205dp"
+                android:layout_marginBottom="93dp"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.6"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.53999996"
+                tools:visibility="gone" />
+
+            <com.facebook.login.widget.LoginButton
+                android:id="@+id/connectWithFbButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="312dp"
+                android:layout_marginEnd="184dp"
+                android:text="Continuar com Facebook"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/loginTitle"
+                android:layout_width="200dp"
+                android:layout_height="100px"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="162dp"
+                android:layout_marginEnd="63dp"
+                android:layout_marginBottom="108dp"
+                android:layout_weight="3"
+                android:text="LOGIN"
+                android:textAlignment="center"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toTopOf="@+id/connectWithFbButton"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
 
 </LinearLayout>
