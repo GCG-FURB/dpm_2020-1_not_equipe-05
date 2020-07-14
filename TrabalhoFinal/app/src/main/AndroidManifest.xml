@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Lista">
+        <activity android:name=".SignInActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -19,7 +19,7 @@
         </activity>
         <activity android:name=".AddEvent">
         </activity>
-        <activity android:name=".SignInActivity">
+        <activity android:name=".Lista">
         </activity>
         <activity android:name=".Join">
         </activity>
